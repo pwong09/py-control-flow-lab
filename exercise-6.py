@@ -38,7 +38,7 @@ if month in winter: season = 'winter'
 elif month in spring: season = 'spring'
 elif month in fall: season = 'fall'
 elif month in summer: season = 'summer'
-else: print('Not a valid input')
+else: print('Not a valid month input')
 
 if day in range(1, 32):
     if (month == 'dec' and day in range(21, 31)) or (month == 'mar' and day in range(1, 20)):

@@ -12,17 +12,21 @@
 #      etc.
 
 # Hint: The next number is found by adding the two numbers before it
-memo = {}
 
-def fibonacci (num):
-    if num < 0: return
-    answer = None
-    if num in memo: answer = memo[num]
-    if num == 0 or num == 1: answer = num
-    else:
-        answer = fibonacci(num - 1) + fibonacci(num - 2)
-        memo[num] = answer
-    return answer
+num1 = 0
+num2 = 1
+for x in range(0, 50):
+    print(f'term: {x} / number: {num1}')
+    next = num1 + num2
+    num1 = num2
+    num2 = next
 
-for i in range(50):
-    print(f'term: {i} / number: {fibonacci(i)}')
+# very slow after the first 30 terms:
+# def fibonacci (num):
+#     if num < 0: return
+#     if num == 0 or num == 1: answer = num
+#     else:
+#         return fibonacci(num - 1) + fibonacci(num - 2)
+
+# for i in range(50):
+#     print(f'term: {i} / number: {fibonacci(i)}')
