@@ -12,4 +12,3 @@ phrase = ''
 while phrase != 'quit':
     phrase = input('Please enter a word or phrase: ').lower()
     print(f'The phrase, {phrase}, you entered is {len(phrase)} characters long')
-

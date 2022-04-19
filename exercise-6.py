@@ -40,14 +40,13 @@ elif month in fall: season = 'fall'
 elif month in summer: season = 'summer'
 else: print('Not a valid input')
 
-#refactor for range
-if (month == 'dec' and day > 21) or (month == 'mar' and day <= 19):
+if (month == 'dec' and day in range(21, 31)) or (month == 'mar' and day in range(1, 20)):
     season = 'winter'
-elif (month == 'mar' and day > 19) or (month == 'jun' and day <= 20):
+elif (month == 'mar' and day in range(20, 32)) or (month == 'jun' and day in range(1, 21)):
     season = 'spring'
-elif (month == 'jun' and day > 20) or (month == 'sep' and day <= 21):
+elif (month == 'jun' and day in range(21, 31)) or (month == 'sep' and day in range(1, 22)):
     season = 'summer'
-elif (month == 'sep' and day > 21) or (month == 'dec' and day <= 20):
+elif (month == 'sep' and day in range(22, 31)) or (month == 'dec' and day in range(1, 21)):
     season = 'fall'
 else:
     print('Not a valid input(s)')
