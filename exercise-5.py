@@ -15,13 +15,10 @@
 memo = {}
 
 def fibonacci (num):
-    if num < 0:
-        return
+    if num < 0: return
     answer = None
-    if num in memo:
-        answer = memo[num]
-    if num == 0 or num == 1:
-        answer = num
+    if num in memo: answer = memo[num]
+    if num == 0 or num == 1: answer = num
     else:
         answer = fibonacci(num - 1) + fibonacci(num - 2)
         memo[num] = answer

@@ -40,15 +40,15 @@ elif month in fall: season = 'fall'
 elif month in summer: season = 'summer'
 else: print('Not a valid input')
 
-if (month == 'dec' and day in range(21, 31)) or (month == 'mar' and day in range(1, 20)):
-    season = 'winter'
-elif (month == 'mar' and day in range(20, 32)) or (month == 'jun' and day in range(1, 21)):
-    season = 'spring'
-elif (month == 'jun' and day in range(21, 31)) or (month == 'sep' and day in range(1, 22)):
-    season = 'summer'
-elif (month == 'sep' and day in range(22, 31)) or (month == 'dec' and day in range(1, 21)):
-    season = 'fall'
+if day in range(1, 32):
+    if (month == 'dec' and day in range(21, 31)) or (month == 'mar' and day in range(1, 20)):
+        season = 'winter'
+    elif (month == 'mar' and day in range(20, 32)) or (month == 'jun' and day in range(1, 21)):
+        season = 'spring'
+    elif (month == 'jun' and day in range(21, 31)) or (month == 'sep' and day in range(1, 22)):
+        season = 'summer'
+    elif (month == 'sep' and day in range(22, 31)) or (month == 'dec' and day in range(1, 21)):
+        season = 'fall'
+    print(f'{month} {day} is in {season}')
 else:
-    print('Not a valid input(s)')
-
-print(f'{month} {day} is in {season}')
+    print('Not a valid day input')
